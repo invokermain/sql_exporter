@@ -32,10 +32,10 @@ const (
       </head>
       <body>
         <div class="navbar">
-          <div class="navbar-header"><a href="/">Prometheus SQL Exporter</a></div>
-          <div><a href="{{ .MetricsPath }}">Metrics</a></div>
-          <div><a href="/config">Configuration</a></div>
-          <div><a href="/debug/pprof">Profiling</a></div>
+          <div class="navbar-header"><a href="./">Prometheus SQL Exporter</a></div>
+          <div><a href=".{{ .MetricsPath }}">Metrics</a></div>
+          <div><a href="./config">Configuration</a></div>
+          <div><a href="./debug/pprof">Profiling</a></div>
           <div><a href="{{ .DocsUrl }}">Help</a></div>
         </div>
         {{template "content" .}}
@@ -45,7 +45,7 @@ const (
 
     {{ define "content.home" -}}
       <p>This is a <a href="{{ .DocsUrl }}">Prometheus SQL Exporter</a> instance.
-        You are probably looking for its <a href="{{ .MetricsPath }}">metrics</a> handler.</p>
+        You are probably looking for its <a href=".{{ .MetricsPath }}">metrics</a> handler.</p>
     {{- end }}
 
     {{ define "content.config" -}}
